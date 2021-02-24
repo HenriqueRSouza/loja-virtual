@@ -1,0 +1,65 @@
+.nav-container{
+    width: 100%;
+    height: 3.5rem;
+
+    display: flex;
+    background: #fafafa;
+
+    justify-content: space-between;
+    position: absolute;
+}
+
+.nav-text{
+    display: flex;
+
+    text-align: center;
+
+    margin-left: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    color: black;
+    font-family: 'Source Code Pro';
+}
+
+.nav-button{
+    display: flex;
+
+    text-align: center;
+
+    margin-right: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.nav-links{
+    display: flex;
+
+    margin-left: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.nav-links p{
+    padding: 10px 0 15px 0 ;
+}
+
+.links{
+    display: flex;
+}
+
+.links p:hover{
+    width: 100%;
+    border-bottom: 3px solid;
+}
+
+.seta{
+    display: flex;
+    justify-content: space-between;
+
+    margin-right: 2rem;
+    margin-left: 1px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
