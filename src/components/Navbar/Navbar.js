@@ -7,8 +7,10 @@ import Button from '../Button/Button';
 
 const Navbar = () =>{
     const [click, setClick] = useState(false);
-
     const handleClick = () => setClick(!click);
+
+    const [menu, setMenu] = useState(false);
+    const toggling = () => setMenu(!menu);
 
     return(
         <div className="nav-container">
@@ -17,8 +19,42 @@ const Navbar = () =>{
 
                 <div className="nav-links">
                     <div className="links">
+                        <p onClick={handleClick, toggling}>Creation</p>
+                            <a  
+                                href="creation"
+                                onClick={handleClick}
+                                className="seta"
+                            > 
+                            {click ? (<IoIosArrowDown />): (<IoIosArrowUp/>)}
+                        </a>
+                        
+                        <div className="nav-menu">
+                            {menu && (
+                                <ul className="Dropdown">
+                                    <li>Mangoes</li>
+                                    <li>Apples</li>
+                                    <li>Oranges</li>
+                                </ul>
+                            )}
+                        </div>
+                    </div>
+                    
+                    <div className="links">
                         <p onClick={handleClick}>Creation</p>
                             <a  
+                                href="creation"
+                                onClick={handleClick}
+                                className="seta"
+                            > 
+                            {click ? (<IoIosArrowDown />): (<IoIosArrowUp/>)}
+                        </a>
+                        
+                    </div>
+
+                    <div className="links">
+                        <p onClick={handleClick}>Creation</p>
+                            <a  
+                                href="creation"
                                 onClick={handleClick}
                                 className="seta"
                             > 
@@ -29,26 +65,7 @@ const Navbar = () =>{
                     <div className="links">
                         <p onClick={handleClick}>Creation</p>
                             <a  
-                                onClick={handleClick}
-                                className="seta"
-                            > 
-                            {click ? (<IoIosArrowDown />): (<IoIosArrowUp/>)}
-                        </a>
-                    </div>
-
-                    <div className="links">
-                        <p onClick={handleClick}>Creation</p>
-                            <a  
-                                onClick={handleClick}
-                                className="seta"
-                            > 
-                            {click ? (<IoIosArrowDown />): (<IoIosArrowUp/>)}
-                        </a>
-                    </div>
-
-                    <div className="links">
-                        <p onClick={handleClick}>Creation</p>
-                            <a  
+                                href="creation"
                                 onClick={handleClick}
                                 className="seta"
                             > 
@@ -58,19 +75,18 @@ const Navbar = () =>{
                 </div>
             </div>
 
-            
-
             <div className="nav-button">
                 <Button  
                     className="btns"
-                    buttonStyle="btn--prymary"
+                    buttonStyle="btn--primary"
                     buttonSize="btn--circle"
                 >
                     LOGIN
                 </Button>
             </div>
-        </div>
+        </div>   
     );
-} 
+}
+ 
 
 export default Navbar;

@@ -3,10 +3,8 @@
     height: 3.5rem;
 
     display: flex;
-    background: #fafafa;
-
+    background: white;
     justify-content: space-between;
-    position: absolute;
 }
 
 .nav-text{
@@ -50,8 +48,7 @@
 }
 
 .links p:hover{
-    width: 100%;
-    border-bottom: 3px solid;
+    color: #116DFF;
 }
 
 .seta{
@@ -62,4 +59,12 @@
     margin-left: 1px;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.nav-menu{
+
+    justify-content: center;
+
+    list-style: none;
+    font-style: none;
 }

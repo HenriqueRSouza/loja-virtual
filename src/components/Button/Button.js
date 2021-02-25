@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import './Button.css';
 
-const STYLES = ['btn--primary', 'btn--outine', 'btn--transition'];
+const STYLES = ['btn--primary', 'btn--outine', 'btn--transition', 'btn--full'];
 
-const SIZES = ['btn--medium', 'btn--large', 'btn-circle'];
+const SIZES = ['btn--medium', 'btn--large', 'btn--circle'];
 
 export const Button = ({
     children,
