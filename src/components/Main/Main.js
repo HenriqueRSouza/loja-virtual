@@ -18,7 +18,6 @@ const Main = () => {
                     >Get Started</Button>
                 </div>
             </div>
-
         </div>
     );
 

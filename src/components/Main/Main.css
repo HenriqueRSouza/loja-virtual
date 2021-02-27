@@ -3,13 +3,12 @@
     height: 100vh;
 
     display: flex;
-    padding: 0;
+    padding: 0 0 0 0;
 
+    margin-top: -80px;
     font-family: 'Roboto';
     align-items: center;
     text-align: center;
-
-    justify-content: center;
 
     background: #fafafa;
 }
@@ -44,4 +43,19 @@
 
 .btn--main{
     margin-top: 2rem;
+}
+
+@media screen and (max-width: 960px){
+    .text h1{
+        font-size: clamp(45px, 2.5vw, 70px);
+        width: 100%;
+        font-weight: 500;
+
+        margin-top: 0px;
+    }
+
+    .text p{
+        font-size: clamp(20px, 3.5vw, 28px); 
+        width: 90%;  
+    }
 }

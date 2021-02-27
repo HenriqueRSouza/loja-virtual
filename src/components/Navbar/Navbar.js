@@ -4,87 +4,89 @@ import './Navbar.css';
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
+
+import Dropdown from '../Dropdown/Dropdown'
 
 const Navbar = () =>{
     const [click, setClick] = useState(false);
+    const [dropdown, setDropdown] = useState(false);
+    
     const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
 
-    const [menu, setMenu] = useState(false);
-    const toggling = () => setMenu(!menu);
+    const onMouseEnter = () =>{
+        if(window.innerWidth < 960){
+            setDropdown(false);
+        }else{
+            setDropdown(true);
+        }
+    };
+
+    const onMouseLeave = () => {
+        if(window.innerWidth < 960){
+            setDropdown(false);
+        }else {
+            setDropdown(false);
+        }
+    }
 
     return(
-        <div className="nav-container">
-            <div className="nav-text">
-                <h1>ETYKE</h1>
-
-                <div className="nav-links">
-                    <div className="links">
-                        <p onClick={handleClick, toggling}>Creation</p>
-                            <a  
-                                href="creation"
-                                onClick={handleClick}
-                                className="seta"
-                            > 
-                            {click ? (<IoIosArrowDown />): (<IoIosArrowUp/>)}
-                        </a>
-                        
-                        <div className="nav-menu">
-                            {menu && (
-                                <ul className="Dropdown">
-                                    <li>Mangoes</li>
-                                    <li>Apples</li>
-                                    <li>Oranges</li>
-                                </ul>
-                            )}
-                        </div>
-                    </div>
-                    
-                    <div className="links">
-                        <p onClick={handleClick}>Creation</p>
-                            <a  
-                                href="creation"
-                                onClick={handleClick}
-                                className="seta"
-                            > 
-                            {click ? (<IoIosArrowDown />): (<IoIosArrowUp/>)}
-                        </a>
-                        
-                    </div>
-
-                    <div className="links">
-                        <p onClick={handleClick}>Creation</p>
-                            <a  
-                                href="creation"
-                                onClick={handleClick}
-                                className="seta"
-                            > 
-                            {click ? (<IoIosArrowDown />): (<IoIosArrowUp/>)}
-                        </a>
-                    </div>
-
-                    <div className="links">
-                        <p onClick={handleClick}>Creation</p>
-                            <a  
-                                href="creation"
-                                onClick={handleClick}
-                                className="seta"
-                            > 
-                            {click ? (<IoIosArrowDown />): (<IoIosArrowUp/>)}
-                        </a>
-                    </div>
+        <>
+            <nav className="navbar">
+                <Link className="navbar-logo" to="/" onClick={closeMobileMenu}>
+                    <h1>ETYKE</h1>
+                </Link>
+                <div className="menu-icon" onClick={handleClick}>
+                    <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                 </div>
-            </div>
 
-            <div className="nav-button">
-                <Button  
-                    className="btns"
-                    buttonStyle="btn--primary"
-                    buttonSize="btn--circle"
-                >
+                <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                    <li className="nav-item">
+                        <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            Home
+                        </Link>
+                    </li>
+                    <li 
+                        className="nav-item"
+                        onMouseEnter={onMouseEnter}
+                        onMouseLeave={onMouseLeave}
+                    >
+                        <Link
+                            to="/services"
+                            className="nav-links"
+                            onClick={closeMobileMenu}
+                        >
+                        Services <i className="fas fa-caret-down"></i>
+                        </Link>
+                        {dropdown && <Dropdown/>}
+                    </li>
+
+                    <li className="nav-item">
+                        <Link 
+                            to="/products"
+                            className="nav-links"
+                            onClick={closeMobileMenu}
+                        >
+                        Products
+                        </Link>
+                    </li>
+
+                </ul>
+
+
+
+                <div className="nav-button">
+                    <Button  
+                        className="btns"
+                        buttonStyle="btn--primary"
+                        buttonSize="btn--circle"
+                    >
                     LOGIN
-                </Button>
-            </div>
-        </div>   
+                    </Button>
+                </div>
+            </nav>
+        </>   
     );
 }
  
