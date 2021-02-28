@@ -3,12 +3,13 @@
     height: 100vh;
 
     display: flex;
-    padding: 0 0 0 0;
+    margin: auto;
 
-    margin-top: -80px;
     font-family: 'Roboto';
+    
     align-items: center;
     text-align: center;
+    justify-content: center;
 
     background: #fafafa;
 }
@@ -24,7 +25,7 @@
     margin: auto;
 
     font-weight: 500;
-    font-size: 95px;
+    font-size: 92px;
 
     justify-content: center;
     text-align: center;

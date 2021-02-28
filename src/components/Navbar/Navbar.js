@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 
@@ -32,7 +30,7 @@ const Navbar = () =>{
     }
 
     return(
-        <>
+        <div className="navbar-container">
             <nav className="navbar">
                 <Link className="navbar-logo" to="/" onClick={closeMobileMenu}>
                     <h1>ETYKE</h1>
@@ -86,7 +84,7 @@ const Navbar = () =>{
                     </Button>
                 </div>
             </nav>
-        </>   
+        </div>   
     );
 }
  

@@ -36,12 +36,20 @@
     opacity: 1;
     transition: 1s;
 }
+.btn--under{
+    color: white;
+    border-bottom: 3px solid white;
+
+    background: transparent;
+}
 
 
 /*Sizes button*/
 .btn--medium{
-    padding: 8px 10px;
-    font-size: 16px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 600;
+    
 }
 
 .btn--large{
@@ -54,7 +62,7 @@
     border-radius: 20px;
 }
 /* Transition */
-.btn--medium:hover,
+
 .btn--large:hover,
 .btn--outline:hover,
 .btn--circle:hover{

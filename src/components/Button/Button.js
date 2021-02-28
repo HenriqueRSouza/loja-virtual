@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Button.css';
 
-const STYLES = ['btn--primary', 'btn--outine', 'btn--transition', 'btn--full'];
+const STYLES = ['btn--primary', 'btn--outine', 'btn--transition', 'btn--full', 'btn--under'];
 
 const SIZES = ['btn--medium', 'btn--large', 'btn--circle'];
 
