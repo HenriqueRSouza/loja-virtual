@@ -33,7 +33,7 @@ const Navbar = () =>{
         <div className="navbar-container">
             <nav className="navbar">
                 <Link className="navbar-logo" to="/" onClick={closeMobileMenu}>
-                    <h1>ETYKE</h1>
+                    <h1>TYKÊ</h1>
                 </Link>
                 <div className="menu-icon" onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
