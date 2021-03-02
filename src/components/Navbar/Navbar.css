@@ -115,6 +115,15 @@
     font-style: none;
 }
 
+.button-link{
+    text-decoration: none;
+    color: #116DFF;
+}
+
+.button-link:hover{
+    color: white;
+}
+
 @media screen and (max-width: 960px) {
     .NavBarItems{
         position: relative;

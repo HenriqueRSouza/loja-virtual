@@ -8,5 +8,4 @@ export const MenuItems = [{
     path: '/consulting',
     cName: 'dropdown-link',
 },
-
 ];

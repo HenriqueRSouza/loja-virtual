@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 
 import './Cards.css';
@@ -16,6 +17,10 @@ const Cards = () => {
                         <p>Design and build your own high-quality websites. Whether you’re promoting your business, showcasing your work, opening your store or starting a blog—you can do it all with the Wix website builder.</p>
                     </div>
                     <div className="cards-button">
+                    <Link
+                            to="/login"
+                            className="button-link"
+                    >
                         <Button
                             className="btns"
                             buttonStyle="btn--under"
@@ -24,6 +29,7 @@ const Cards = () => {
                             Se inscreva
                             <i className="fas fa-arrow-right"></i>
                         </Button>
+                    </Link>
                     </div>
                 </div>
                 

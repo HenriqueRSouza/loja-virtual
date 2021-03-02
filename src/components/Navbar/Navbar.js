@@ -72,19 +72,23 @@ const Navbar = () =>{
 
                 </ul>
 
-
-
                 <div className="nav-button">
+                <Link
+                    to="/login"
+                    className="button-link"
+                >
                     <Button  
-                        className="btns"
+                        className="button-link"
                         buttonStyle="btn--primary"
                         buttonSize="btn--circle"
                     >
-                    LOGIN
+                        
+                        Login
                     </Button>
-                </div>
-            </nav>
-        </div>   
+                </Link>
+            </div>
+        </nav>
+    </div>   
     );
 }
  

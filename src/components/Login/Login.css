@@ -1,0 +1,56 @@
+.login-container{
+    font-family: 'Roboto';
+    background: #fafafa;
+
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+
+    margin: auto;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.logo-login{
+    display: flex;
+
+    text-align: center;
+    justify-content: center;
+}
+
+
+.input-login{
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.input1{
+    margin-bottom: 10px;
+}
+
+.input1,
+.input2{
+    border-radius: 20px;
+    width: 200px;
+    height: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 0 0 0;
+    border: 1px solid black;
+    outline: 0;
+}
+
+.button-login{
+    margin-top: 10px;
+}
